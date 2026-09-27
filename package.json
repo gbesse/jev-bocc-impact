@@ -1,0 +1,54 @@
+{
+  "name": "@gbesse/jev-bocc-impact",
+  "version": "0.1.0",
+  "description": "Map French collective-agreement changes to reviewable payroll and HR impacts, filtered by exact IDCC.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.mts",
+      "import": "./src/index.mjs"
+    },
+    "./jev": {
+      "types": "./src/jev.d.mts",
+      "import": "./src/jev.mjs"
+    }
+  },
+  "bin": {
+    "jev-bocc-impact": "./bin/jev-bocc-impact.mjs"
+  },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "typecheck": "tsc --noEmit --strict --target ES2022 --module NodeNext docs/public-api-types.mts",
+    "test": "node --test",
+    "demo": "node examples/demo.mjs",
+    "validate": "npm run check && npm run typecheck && npm test && npm run demo"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbesse/jev-bocc-impact.git"
+  },
+  "keywords": [
+    "jev",
+    "typesafe-ai",
+    "france",
+    "bocc",
+    "collective-agreements",
+    "france",
+    "hr-tech",
+    "jev"
+  ],
+  "files": [
+    "src",
+    "bin",
+    "docs",
+    "examples",
+    "scripts"
+  ]
+}

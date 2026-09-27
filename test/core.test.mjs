@@ -1,0 +1,5 @@
+import test from "node:test";import assert from "node:assert/strict";import{companyProfile,assessImpact}from"../src/index.mjs";import{createFakeProvider}from"../src/jev.mjs";
+const change={id:"c",idcc:"1486",title:"Avenant",text:"Prime conventionnelle",publishedAt:"2026-01-01",sourceUrl:"https://legifrance.gouv.fr"};
+test("normalizes an IDCC",()=>assert.equal(companyProfile({id:"x",idcc:"44"}).idcc,"0044"));
+test("different IDCC bypasses Jev",async()=>{const p=createFakeProvider(()=>{throw Error("must not run")});const r=await assessImpact({id:"x",idcc:"44"},change,p);assert.equal(r.applicable,false);assert.equal(p.calls,0)});
+test("matching IDCC produces mandatory review",async()=>{const p=createFakeProvider(()=>({model:"jev-1.13.0",answers:{impact:{type:"choice",choice:"benefits",probabilities:{payroll:.05,working_time:.05,leave:.05,benefits:.7,classification:.05,health_safety:.05,other:.05},confidence:.7},urgency:{type:"score",score:1,probabilities:{0:.1,1:.7,2:.1,3:.1},confidence:.7}},usage:{input_tokens:10,output_tokens:0}}));const r=await assessImpact({id:"x",idcc:"1486"},change,p);assert.equal(r.impact,"benefits");assert.equal(r.review,true)});
