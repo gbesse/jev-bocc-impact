@@ -1,7 +1,7 @@
 {
   "name": "@gbesse/jev-bocc-impact",
-  "version": "0.1.0",
-  "description": "Map French collective-agreement changes to reviewable payroll and HR impacts, filtered by exact IDCC.",
+  "version": "0.1.1",
+  "description": "Relie les évolutions des conventions collectives à leurs impacts paie et RH, après filtrage exact par IDCC.",
   "type": "module",
   "license": "MIT",
   "engines": {
