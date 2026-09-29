@@ -1,4 +1,4 @@
-// Purpose: Filter BOCC changes by exact IDCC and classify their operational HR impact.
+// Objectif : implémenter la frontière de décision métier propre au dépôt.
 export const IMPACTS=["payroll","working_time","leave","benefits","classification","health_safety","other"];
 export function companyProfile(input){if(!input?.id || !input?.idcc)throw new TypeError("A company needs id and idcc");
   const idcc=String(input.idcc).padStart(4,"0");if(!/^\d{4}$/.test(idcc))throw new TypeError("idcc must contain up to 4 digits");

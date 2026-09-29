@@ -1,5 +1,5 @@
-# How it decides
+# Comment la décision est prise
 
-Exact IDCC mismatch prevents a model call. Jev classifies the operational domain and urgency only after that filter. Every applicable result requires HR or legal review.
+Une incompatibilité d’IDCC empêche tout appel au modèle. Jev qualifie seulement le domaine et l’urgence après ce filtre. Chaque résultat applicable exige une revue RH ou juridique.
 
-The exact questions and criteria are versioned beside the call in [src/index.mjs](../src/index.mjs). Synthetic demo probabilities are illustrative. Calibrate thresholds on representative human labels before operational use.
+La question et les critères exacts sont versionnés dans [`src/index.mjs`](../src/index.mjs). Les probabilités de la démonstration sont synthétiques. Calibrez les seuils de revue sur des cas français annotés et représentatifs avant tout usage opérationnel.
