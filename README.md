@@ -2,7 +2,7 @@
 
 **Relie les évolutions des conventions collectives à leurs impacts paie et RH, après filtrage exact par IDCC.**
 
-[![Tests](https://github.com/gbesse/jev-bocc-impact/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-bocc-impact/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.2 · Documentation française
+[![Tests](https://github.com/gbesse/jev-bocc-impact/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-bocc-impact/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.3 · Documentation française
 
 Le moteur écarte les textes dont l’IDCC ne correspond pas à celui de l’entreprise. Jev classe ensuite le domaine RH concerné et l’urgence opérationnelle.
 
@@ -73,10 +73,20 @@ console.log(JSON.stringify(resultat, null, 2));
 Lancez-le avec :
 
 ```sh
-npm run demo
+npm run demo:principal
 ```
 
 Résultat à repérer : `impact: payroll`.
+
+### Cas limite à tester
+
+Un avenant portant un autre IDCC est déclaré non applicable localement. Le code se trouve dans [`examples/cas-limite.mjs`](examples/cas-limite.mjs).
+
+```sh
+npm run demo:limite
+```
+
+Résultat à repérer : `applicable: false · appels Jev: 0`. La commande `npm run demo` exécute les deux exemples.
 
 ## Utilisation de la bibliothèque
 
