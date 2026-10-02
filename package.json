@@ -1,6 +1,6 @@
 {
   "name": "@gbesse/jev-bocc-impact",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Relie les évolutions des conventions collectives à leurs impacts paie et RH, après filtrage exact par IDCC.",
   "type": "module",
   "license": "MIT",
@@ -27,7 +27,8 @@
     "demo": "node examples/demo.mjs && node examples/cas-limite.mjs",
     "validate": "npm run check && npm run typecheck && npm test && npm run demo",
     "demo:principal": "node examples/demo.mjs",
-    "demo:limite": "node examples/cas-limite.mjs"
+    "demo:limite": "node examples/cas-limite.mjs",
+    "demo:parcours": "node examples/parcours-comparatif.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.3"
