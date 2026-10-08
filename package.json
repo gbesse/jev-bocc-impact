@@ -1,6 +1,6 @@
 {
   "name": "@gbesse/jev-bocc-impact",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Relie les évolutions des conventions collectives à leurs impacts paie et RH, après filtrage exact par IDCC.",
   "type": "module",
   "license": "MIT",

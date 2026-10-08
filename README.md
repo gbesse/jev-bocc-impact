@@ -2,7 +2,7 @@
 
 **Relie les évolutions des conventions collectives à leurs impacts paie et RH, après filtrage exact par IDCC.**
 
-[![Tests](https://github.com/gbesse/jev-bocc-impact/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-bocc-impact/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.4 · Documentation française
+[![Tests](https://github.com/gbesse/jev-bocc-impact/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-bocc-impact/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.5 · Documentation française
 
 Le moteur écarte les textes dont l’IDCC ne correspond pas à celui de l’entreprise. Jev classe ensuite le domaine RH concerné et l’urgence opérationnelle.
 
@@ -135,3 +135,11 @@ npm run demo
 La CI exécute ces vérifications sous Node.js 22 et 24.
 
 Projet indépendant, sans affiliation avec TypeSafe AI ni avec l’administration française. Consultez la [documentation de l’API Jev](https://docs.typesafe.ai/api) et les [limites du modèle](https://docs.typesafe.ai/model-jaggedness/jev-1.13).
+
+## October 2026 improvement · Amélioration d’octobre 2026 · Mejora de octubre de 2026
+
+An invented impact, out-of-range probability or invalid urgency now fails before an HR recommendation is returned. Run `npm test`.
+
+Un impact inventé, une probabilité hors bornes ou une urgence invalide échoue désormais avant toute recommandation RH. Lancez `npm test`.
+
+Un impacto inventado, una probabilidad fuera de rango o una urgencia inválida falla antes de devolver una recomendación de RR. HH. Ejecute `npm test`.
